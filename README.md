@@ -5,7 +5,7 @@ KeyGuardian
 
 KeyGuardian is a powerful C++ tool designed for data encryption, decryption, hash identification, and brute-force decryption. This versatile tool is aimed at providing developers and security enthusiasts with a reliable solution for securing and managing sensitive information.
 
-![KeyGuardian Logo](logo.png)
+![KeyGuardian Logo](##)
 
 Features
 --------
@@ -20,8 +20,11 @@ Usage
 -----
 
 1.  Clone the repository:
-`git clone https://github.com/yourusername/KeyGuardian.git` `cd KeyGuardian`4.  Build the project:
-`g++ -o keyguardian main.cpp`6.  Run KeyGuardian:
+`git clone https://github.com/yourusername/KeyGuardian.git`
+`cd KeyGuardian`
+2.  Build the project:
+`g++ -o keyguardian main.cpp`
+3.  Run KeyGuardian:
 `./keyguardian`
 
 For detailed usage instructions and examples, please refer to the [documentation](docs/README.md).
