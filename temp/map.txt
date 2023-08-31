@@ -1,1 +1,2 @@
 hash_id.cpp --> Hash Identification file
+decry.cpp --> Scan from wordlists for matching hashes
