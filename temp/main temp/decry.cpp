@@ -9,7 +9,8 @@
 
 using namespace std;
 
-string md5Hash(const string &input) {
+string md5Hash(const string &input)
+{
     unsigned char hash[MD5_DIGEST_LENGTH];
     MD5(reinterpret_cast<const unsigned char*>(input.c_str()), input.size(), hash);
 
@@ -20,7 +21,8 @@ string md5Hash(const string &input) {
     return ss.str();
 }
 
-int main() {
+int main()
+{
     string filename;
     string targetHash;
 
@@ -31,7 +33,8 @@ int main() {
     cin >> targetHash;
 
     ifstream wordlistFile(filename);
-    if (!wordlistFile.is_open()) {
+    if (!wordlistFile.is_open())
+    {
         cout << "Error opening the wordlist file." << endl;
         return 1;
     }
