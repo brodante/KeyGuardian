@@ -65,7 +65,8 @@ int main()
         cout << "Enter your choice: ";
         cin >> choice;
 
-        switch (choice) {
+        switch (choice)
+        {
             case 1:
                 identifyHash();
                 break;
@@ -84,11 +85,6 @@ int main()
             default:
                 cout << COLOR_RED << "Invalid choice! Please select a valid option.\n" << COLOR_RESET;
         }
-
-        // Wait for user input before clearing the screen
-        cout << "\nPress Enter to continue...";
-        cin.ignore();
-        cin.get();
 
     }while(choice!=5);
 

@@ -7,7 +7,7 @@ unordered_map<string, string> hashTypes = {
   {"SHA-512", "^[a-fA-F0-9]{128}$"},
   {"CRC32", "^[a-fA-F0-9]{8}$"},
   {"LM", "^[0-9A-F]{32}:[0-9A-F]{32}$"},
-  {"NTLM", "^[0-9A-F]{32}$"},
+  {"NTLM", "^\\$NT\\$[a-fA-F0-9]{32}$"},
   {"MySQL323", "^[0-9A-F]{16}$"},
   {"PostgreSQL", "^[0-9A-F]{32}$"},
   {"Cisco PIX", "^[0-9A-F]{16}$"},
