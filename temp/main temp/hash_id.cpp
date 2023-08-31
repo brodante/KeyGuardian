@@ -1,10 +1,5 @@
-#include <iostream>
-#include <unordered_map>
-#include <regex>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
-
 unordered_map<string, string> hashTypes = {
   {"MD5", "^[a-fA-F0-9]{32}$"},
   {"SHA-1", "^[a-fA-F0-9]{40}$"},
@@ -24,9 +19,11 @@ unordered_map<string, string> hashTypes = {
   {"CRC16-CCITT", "^[a-fA-F0-9]{4}$"},
 };
 
-vector<string> identifyHash(const string& hash) {
+vector<string> identifyHash(const string& hash)
+{
     vector<string> possibleTypes;
-    for (const auto& entry : hashTypes) {
+    for (const auto& entry : hashTypes)
+    {
         regex pattern(entry.second);
         if (regex_match(hash, pattern))
             possibleTypes.push_back(entry.first);
@@ -34,23 +31,21 @@ vector<string> identifyHash(const string& hash) {
     return possibleTypes;
 }
 
-int main() {
+int main()
+{
     string inputHash;
-    cout << "Enter a hash: ";
-    cin >> inputHash;
-
-    vector<string> possibleTypes = identifyHash(inputHash);
-
-    if (possibleTypes.empty()) {
-        cout << "Unidentified hash\n";
-    } else if (possibleTypes.size() == 1) {
-        cout << "Hash identified as: " << possibleTypes[0] << '\n';
-    } else {
+    cout<<"Enter hash: ";
+    cin>>inputHash;
+    vector<string>possibleTypes=identifyHash(inputHash);
+    if(possibleTypes.empty())
+        cout<<"Unidentified hash\n";
+    else if(possibleTypes.size()==1)
+        cout<<"Hash identified as: " <<possibleTypes[0]<<'\n';
+    else
+    {
         cout << "Hash can be from any of the following types:\n";
-        for (const auto& type : possibleTypes) {
+        for(const auto& type : possibleTypes)
             cout << "- " << type << '\n';
-        }
     }
-
     return 0;
 }
