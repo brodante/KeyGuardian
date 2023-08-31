@@ -1,2 +1,3 @@
 hash_id.cpp --> Hash Identification file
 decry.cpp --> Scan from wordlists for matching hashes
+homeScreen.cpp --> Basic CUI for HomeScreen
