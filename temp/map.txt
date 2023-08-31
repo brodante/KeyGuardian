@@ -1,3 +1,5 @@
+all/headers.h --> all headers/ c++ files included in a single directory
+
 hash_id.cpp --> Hash Identification file
 decry.cpp --> Scan from wordlists for matching hashes
 homescreen.cpp --> Basic CUI for HomeScreen
