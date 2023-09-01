@@ -41,8 +41,8 @@ int main()
     // Clear the screen for better readability
     system("cls");
 
-    cout << "\n\n";
-    cout << COLOR_GREEN << "                       Data Encryption/Decryption Software v1.00                     " << COLOR_RESET << "\n";
+    //cout << "\n\n";
+    cout << COLOR_GREEN << "                       KeyGuardian v0.01                     " << COLOR_RESET << "\n";
     cout << COLOR_GREEN << R"(
    _  __           _____                     _ _                    __   ___   ___
   | |/ /          / ____|                   | (_)                  /_ | / _ \ / _ \
