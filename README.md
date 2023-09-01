@@ -34,19 +34,16 @@ Contributors
 
 A big thank you to the following contributors who have helped shape and improve KeyGuardian:
 
-1.  [Contributor 1](https://github.com/contributor1)  
-    \- Role: Developer  
-    \- Contributions: Encryption algorithms, user interface enhancements.
-2.  [Contributor 2](https://github.com/contributor2)  
-    \- Role: Security Expert  
-    \- Contributions: Brute force decryption module, hash identification.
-3.  [Contributor 3](https://github.com/contributor3)  
+1.  [Contributor 1](https://github.com/brodante)  
+    \- Role: Developer  |  Security Expert
+    \- Contributions: Encryption algorithms, user interface enhancements. Brute force decryption module, hash identification.
+2.  [Contributor 3](https://github.com/pdd1825)  
     \- Role: Documentation Lead  
     \- Contributions: Comprehensive documentation, usage examples.
-4.  [Contributor 4](https://github.com/contributor4)  
+3.  [Contributor 4](https://github.com/rishabhpandey106)  
     \- Role: Tester  
     \- Contributions: Extensive testing, bug fixes.
-5.  [Contributor 5](https://github.com/contributor5)  
+4.  [Contributor 5](https://github.com/SpartanXY)  
     \- Role: UI/UX Designer  
     \- Contributions: CLI design, logo creation.
 
