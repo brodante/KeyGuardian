@@ -31,7 +31,7 @@ vector<string> identifyHash(const string& hash)
     return possibleTypes;
 }
 
-int main()
+int hash_id()
 {
     string inputHash;
     cout<<"Enter hash: ";
