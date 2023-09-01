@@ -96,9 +96,7 @@ int main()
                 break;
             default:
                 cout << COLOR_RED << "Invalid choice! Please select a valid option.\n" << COLOR_RESET;
-                cout << "\nPress Enter to continue...";
-                cin.ignore();
-                cin.get();
+                wait
         }
     }while(choice!=5);
 
