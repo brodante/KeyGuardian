@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #include <conio.h>
 #include "hash_id.cpp"
+#include  "../../cryptopp880/md5.h"
+#include  "../../cryptopp880/sha.h"
 #define wait cout<<"\nPress Enter to continue...";cin.ignore();cin.get();
 //#include <cstdlib> // For system("cls") to clear the screen
 using namespace std;
