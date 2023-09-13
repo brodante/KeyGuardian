@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 #include <conio.h>
-#include "all/headers.h"
 #include "hash_id.cpp"
-#include  "../../cryptopp/md5.h"
-#include  "../../cryptopp/sha.h"
+//#include  "../../cryptopp/md5.h"
+//#include  "../../cryptopp/sha.h"
 #define wait cout<<"\nPress Enter to continue...";cin.ignore();cin.get();
 //#include <cstdlib> // For system("cls") to clear the screen
 using namespace std;
@@ -19,7 +18,7 @@ void logo()
   system("cls");
 
   //cout << "\n\n";
-  cout << COLOR_GREEN << "                       KeyGuardian v0.01                     " << COLOR_RESET << "\n";
+  cout << COLOR_GREEN << "                       KeyGuardian v1.00                     " << COLOR_RESET << "\n";
   cout << COLOR_GREEN << R"(
  _  __           _____                     _ _                    __   ___   ___
 | |/ /          / ____|                   | (_)                  /_ | / _ \ / _ \
