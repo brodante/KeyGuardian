@@ -3,7 +3,7 @@ KeyGuardian
 
 KeyGuardian is a powerful C++ tool designed for data encryption, decryption, hash identification, and brute-force decryption. This versatile tool is aimed at providing developers and security enthusiasts with a reliable solution for securing and managing sensitive information.
 
-![KeyGuardian Logo](<img src="https://github.com/brodante/KeyGuardian/blob/main/assets/keyguardian_first_look.jpg")
+<img alt="KeyGuardian First Look" src="https://github.com/brodante/KeyGuardian/blob/main/assets/keyguardian_first_look.jpg">
 
 Features
 --------
