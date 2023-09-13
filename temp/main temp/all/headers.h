@@ -1,6 +1,6 @@
 #ifndef CRYPTOPP_ALL_HEADERS_H
 #define CRYPTOPP_ALL_HEADERS_H
-
+#define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1
 //#include "../decry.cpp"
 #include "../homescreen.cpp"
 #include "../hash_id.cpp"
