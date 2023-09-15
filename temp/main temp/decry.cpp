@@ -1,55 +1,70 @@
+#define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1
 #include <iostream>
-#include <fstream>
 #include <string>
-#include <sstream>
-#include <algorithm>
-#include <iterator>
-#include <openssl/md5.h>
-#include <iomanip>
+#include  "../../cryptopp/cryptlib.h"
+#include  "../../cryptopp/md5.h"
+#include  "../../cryptopp/sha.h"
+#include  "../../cryptopp/sha3.h"
+#include  "../../cryptopp/ripemd.h"
+#include  "../../cryptopp/whrlpool.h"
+#include  "../../cryptopp/hex.h"
+#include  "../../cryptopp/filters.h"
 
 using namespace std;
+using namespace CryptoPP;
+using namespace CryptoPP::Weak;
 
-string md5Hash(const string &input)
-{
-    unsigned char hash[MD5_DIGEST_LENGTH];
-    MD5(reinterpret_cast<const unsigned char*>(input.c_str()), input.size(), hash);
+string identifyHash(const string &hash) {
+    try {
+        // SHA-256
+         CryptoPP::SHA256 sha256;
+        string sha256Hash;
+        StringSource(hash, true, new HexDecoder(new StringSink(sha256Hash)));
+        if (sha256Hash.length() == sha256.DigestSize()) {
+            return "SHA-256";
+        }
 
-    stringstream ss;
-    for (unsigned char c : hash) {
-        ss << hex << setw(2) << setfill('0') << static_cast<int>(c);
+        // MD5
+        MD5 md5;
+        string md5Hash;
+        StringSource(hash, true, new HexDecoder(new StringSink(md5Hash)));
+        if (md5Hash.length() == md5.DigestSize()) {
+            return "MD5";
+        }
+
+        // RIPEMD-160
+        RIPEMD160 ripemd160;
+        string ripemd160Hash;
+        StringSource(hash, true, new HexDecoder(new StringSink(ripemd160Hash)));
+        if (ripemd160Hash.length() == ripemd160.DigestSize()) {
+            return "RIPEMD-160";
+        }
+
+        // Whirlpool
+        Whirlpool whirlpool;
+        string whirlpoolHash;
+        StringSource(hash, true, new HexDecoder(new StringSink(whirlpoolHash)));
+        if (whirlpoolHash.length() == whirlpool.DigestSize()) {
+            return "Whirlpool";
+        }
+
+        // Add more hash types here...
+
+        // If none of the above matches, it's unidentified
+        return "Unidentified";
+    } catch (const Exception &ex) {
+        cerr << "Crypto++ error: " << ex.what() << endl;
+        return "Error";
     }
-    return ss.str();
 }
 
-int main()
-{
-    string filename;
-    string targetHash;
+int main() {
+    string inputHash;
+    cout << "Enter a hash in hexadecimal format: ";
+    cin >> inputHash;
 
-    cout << "Enter the filename of the wordlist (e.g., rockyou.txt): ";
-    cin >> filename;
+    string hashType = identifyHash(inputHash);
+    cout << "Hash identified as: " << hashType << endl;
 
-    cout << "Enter the target MD5 hash: ";
-    cin >> targetHash;
-
-    ifstream wordlistFile(filename);
-    if (!wordlistFile.is_open())
-    {
-        cout << "Error opening the wordlist file." << endl;
-        return 1;
-    }
-
-    string word;
-    while (wordlistFile >> word) {
-        string hashedWord = md5Hash(word);
-        if (hashedWord == targetHash) {
-            cout << "Password found: " << word << endl;
-            wordlistFile.close();
-            return 0;
-        }
-    }
-
-    cout << "Password not found in the wordlist." << endl;
-    wordlistFile.close();
     return 0;
 }

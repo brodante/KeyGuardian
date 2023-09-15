@@ -15,9 +15,9 @@
 #include  "../../../cryptopp/whrlpool.h"
 #include  "../../../cryptopp/tiger.h"
 #include  "../../../cryptopp/panama.h"
-#include  "../../../cryptopp/ripemd.h"
 #include  "../../../cryptopp/crc.h"
 #include  "../../../cryptopp/gost.h"
 #include  "../../../cryptopp/keccak.h"
+#include  "../../../cryptopp/filters.h"
 
 #endif // CRYPTOPP_ALL_HEADERS_H
