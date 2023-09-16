@@ -94,7 +94,7 @@ int main()
                 attemptForceDecryption();
                 break;
             case 5:
-                cout << COLOR_CYAN << "Exiting...\n" << COLOR_RESET;
+                cout << COLOR_RED << "Exiting...\n" << COLOR_RESET;
                 break;
             default:
                 cout << COLOR_RED << "Invalid choice! Please select a valid option.\n" << COLOR_RESET;
