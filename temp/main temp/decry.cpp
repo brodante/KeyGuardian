@@ -17,7 +17,7 @@ using namespace CryptoPP::Weak;
 string identifyHash(const string &hash) {
     try {
         // SHA-256
-         CryptoPP::SHA256 sha256;
+        CryptoPP::SHA256 sha256;
         string sha256Hash;
         StringSource(hash, true, new HexDecoder(new StringSink(sha256Hash)));
         if (sha256Hash.length() == sha256.DigestSize()) {
