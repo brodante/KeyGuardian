@@ -739,7 +739,6 @@ def identify_hash():
     print(logo)
     tmp.clear()
     while True:
-        #tmp=[]
         try:
             try:
                 first = str(argv[1])
@@ -747,12 +746,12 @@ def identify_hash():
                 first = None
 
             try:
-                #tmp=[]
+                tmp.clear()
                 print("-"*50)
                 if first:
                     h = first
                 else:
-                    h = input(" HASH: ")
+                    h = input("\nEnter hash or CTRL+C to return to menu: ")
 
                 passhash(h)
 
