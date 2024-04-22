@@ -737,7 +737,9 @@ def WhirlpoolHMAC(hash):
 tmp= []
 def identify_hash():
     print(logo)
+    tmp.clear()
     while True:
+        #tmp=[]
         try:
             try:
                 first = str(argv[1])
