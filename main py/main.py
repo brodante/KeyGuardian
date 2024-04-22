@@ -2,8 +2,9 @@
 
 import identifyhash
 
-def identify_hash(hash):
-    identifyhash.identify_hash(hash)
+def identify_hash():
+    hash_input = input("Enter the hash: ")
+    identifyhash.identify_hash(hash_input)
 
 def encrypt():
     # Implement encryption logic here
@@ -28,8 +29,7 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            hash_input = input("Enter the hash: ")
-            identify_hash(hash_input)
+            identify_hash()
         elif choice == "2":
             encrypt()
         elif choice == "3":

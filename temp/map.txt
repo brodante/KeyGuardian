@@ -3,3 +3,4 @@ all/headers.h --> all headers/ c++ files included in a single directory
 hash_id.cpp --> Hash Identification file
 decry.cpp --> Scan from wordlists for matching hashes
 homescreen.cpp --> Basic CUI for HomeScreen
+sha256 refr --> https://www.movable-type.co.uk/scripts/sha256.html#src-code
