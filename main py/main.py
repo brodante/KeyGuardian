@@ -3,9 +3,7 @@
 import identifyhash
 
 def identify_hash():
-    hash_input = input("Enter the hash: ")
-    identifyhash.identify_hash(hash_input)
-
+    identifyhash.identify_hash()
 def encrypt():
     # Implement encryption logic here
     print("Encryption function")
