@@ -1,7 +1,15 @@
-from builtins import input
-from sys import argv, exit
+"""
+Author: Surya Pratap Singh Chauhan
+GitHub: https://github.com/brodante
+Email: surya.pratap0038@gmail.com
+Website: https://brodante.github.io/portfolio/
 
-version = 0.1
+Description: final year college student stuck in an infinite loop.
+"""
+from builtins import input
+from sys import argv
+
+version = 0.3
 
 logo='''   #######################################################################
    #   _     _            _   _  __         _               _            #

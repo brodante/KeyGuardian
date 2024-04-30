@@ -1,3 +1,12 @@
+"""
+Author: Surya Pratap Singh Chauhan
+GitHub: https://github.com/brodante
+Email: surya.pratap0038@gmail.com
+Website: https://brodante.github.io/portfolio/
+
+Description: final year college student stuck in an infinite loop.
+"""
+
 import hashlib
 import zlib
 
@@ -48,25 +57,26 @@ def menu():
     for idx, (name, _) in enumerate(algorithms, start=1):
         print(f"{idx}. {name}")
     print("______________________________________________")
-    print(f"0. Return to main menu")
+    print(f"0. or CTL+C Return to main menu")
     print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
 
-def main():
+def hashify():
     while True:
-        menu()
-        choice = input("Enter your choice: ")
+        try:
+            menu()
+            choice = input("Enter your choice: ")
 
-        if choice == "0":
-            print("Returning to main menu...")
-            break
+            if choice == "0":
+                print("Returning to main menu...")
+                break
 
-        if not choice.isdigit() or not (0 <= int(choice) <= len(algorithms)):
-            print("Invalid choice! Please enter a valid option.")
-            continue
+            if not choice.isdigit() or not (0 <= int(choice) <= len(algorithms)):
+                print("Invalid choice! Please enter a valid option.")
+                continue
 
-        data = input("Enter the text: ")
-        result = generate_hash(choice, data)
-        print(f"{algorithms[int(choice) - 1][0]} Hash:", result)
-
-if __name__ == "__main__":
-    main()
+            data = input("Enter the text: ")
+            result = generate_hash(choice, data)
+            print(f"{algorithms[int(choice) - 1][0]} Hash:", result)
+        except KeyboardInterrupt:
+                print("\n\n\tReturning to menu...")
+                break  # Exit the loop and return to the calling function

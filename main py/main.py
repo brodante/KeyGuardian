@@ -1,11 +1,20 @@
+"""
+Author: Surya Pratap Singh Chauhan
+GitHub: https://github.com/brodante
+Email: surya.pratap0038@gmail.com
+Website: https://brodante.github.io/portfolio/
+
+Description: final year college student stuck in an infinite loop.
+"""
 # main.py
 
 import identifyhash
+import hashify
 
 def identify_hash():
     identifyhash.identify_hash()
 def encrypt():
-    # Implement encryption logic here
+    hashify.hashify()
     print("Encryption function")
 
 def decrypt():
