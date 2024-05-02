@@ -19,7 +19,7 @@ Usage
 
 1.  **Clone the repository:**
     ```
-    git clone https://github.com/yourusername/KeyGuardian.git
+    git clone https://github.com/brodante/KeyGuardian.git
     cd KeyGuardian
     cd main py
     ```
