@@ -2,18 +2,19 @@ import os
 import sys
 from cryptography.fernet import Fernet
 
-def load_key(key_path=None):
+def load_key(key_path=None, file_path=None):
     if key_path:
         with open(key_path, 'rb') as key_file:
             return key_file.read()
     else:
         parent_folder = os.path.dirname(os.path.abspath(__file__))
         key_folder = os.path.join(parent_folder, 'FKeys')
-        key_files = [f for f in os.listdir(key_folder) if os.path.isfile(os.path.join(key_folder, f))]
-        if key_files:
-            key_file = os.path.join(key_folder, key_files[0])
-            with open(key_file, 'rb') as default_key_file:
-                return default_key_file.read()
+        file_name = os.path.basename(file_path)
+        key_file_name = os.path.splitext(file_name)[0] + '_key.txt'
+        key_file_path = os.path.join(key_folder, key_file_name)
+        if os.path.exists(key_file_path):
+            with open(key_file_path, 'rb') as key_file:
+                return key_file.read()
         else:
             print("No key found in the default folder. Please provide the key or path of the key.")
             sys.exit(1)
@@ -35,7 +36,7 @@ def main():
         sys.exit(1)
 
     key_input = input("Enter the path of the key file or leave blank to use default key folder: ")
-    key = load_key(key_input)
+    key = load_key(key_input, file_path)
 
     decrypted_data = decrypt_file(file_path, key)
 
