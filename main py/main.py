@@ -11,6 +11,7 @@ import os
 import identifyhash
 import hashify
 import time
+import Fdecry
 
 ver = "0.04 beta"
 def logo(): # https://patorjk.com/software/taag/#p=display&f=Big&t=KeyGuardian%20v0.04%20beta
@@ -36,7 +37,8 @@ def encrypt():
 
 def decrypt():
     # Implement decryption logic here
-    print("Decryption function")
+    #print("Decryption function")
+    Fdecry.decrypt()
 
 def exit_program():
     print("\nByeBye...")
