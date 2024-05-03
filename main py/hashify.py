@@ -10,6 +10,13 @@ Description: final year college student stuck in an infinite loop.
 import hashlib
 import zlib
 
+def logo():
+    print("""\n
+ ^ ^                 
+(\033[96mO\033[0m,\033[96mO\033[0m)                
+(   ) """+"by:\033[91m D4NT3 \033[0m"+"""    
+▔"▔"▔▔▔▔▔▔▔▔▔▔▔▔""")
+
 # Define the algorithms and their corresponding codes
 algorithms = [
     ("MD5 (Message Digest Algorithm 5)", "md5"),
@@ -52,7 +59,8 @@ def generate_hash(choice, data):
             return None
 
 def menu():
-    print("\n#  Hash Menu:")
+    logo()
+    print("#  Hash Menu:")
     print("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔")
     for idx, (name, _) in enumerate(algorithms, start=1):
         print(f"{idx}. {name}")

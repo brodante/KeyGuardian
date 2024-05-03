@@ -10,21 +10,23 @@ Description: final year college student stuck in an infinite loop.
 import os
 import identifyhash
 import hashify
+import time
 
+ver = "0.04 beta"
 def logo(): # https://patorjk.com/software/taag/#p=display&f=Big&t=KeyGuardian%20v0.04%20beta
     os.system("cls" if os.name == "nt" else "clear")
     #print("\n\n")
-    print("\033[96m" + "{:^80}".format("KeyGuardian v0.04") + "\033[0m")
-    print("\033[92m" + """
+    print("\033[96m" + "{:^80}".format("KeyGuardian v"+ver) + "\033[0m")
+    print("""\033[92m
   _  __           _____                     _ _                      ___   ___  _  _     _          _        
  | |/ /          / ____|                   | (_)                    / _ \ / _ \| || |   | |        | |       
  | ' / ___ _   _| |  __ _   _  __ _ _ __ __| |_  __ _ _ __   __   _| | | | | | | || |_  | |__   ___| |_ __ _ 
  |  < / _ \ | | | | |_ | | | |/ _` | '__/ _` | |/ _` | '_ \  \ \ / / | | | | | |__   _| | '_ \ / _ \ __/ _` |
  | . \  __/ |_| | |__| | |_| | (_| | | | (_| | | (_| | | | |  \ V /| |_| | |_| |  | |   | |_) |  __/ || (_| |
  |_|\_\___|\__, |\_____|\__,_|\__,_|_|  \__,_|_|\__,_|_| |_|   \_/  \___(_)___/   |_|   |_.__/ \___|\__\__,_|
-            __/ |                                                                                            
+            __/ |                                                                                   by:\033[91m D4NT3\033[0m\033[92m
            |___/                                                                                             
-""" + "\033[0m")
+\033[0m""")
 
 def identify_hash():
     identifyhash.identify_hash()
@@ -62,6 +64,9 @@ def main():
                 exit_program()
             else:
                 print("Invalid choice! Please enter a valid option.")
+                for remaining in range(3, 0, -1):
+                    print(f"\033[91mReturning to main menu in {remaining}...\033[0m", end="\r")
+                    time.sleep(1)  # Wait for 1 second
         except KeyboardInterrupt:
             print("\nByeBye...")
             exit()
