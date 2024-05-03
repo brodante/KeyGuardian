@@ -1,32 +1,28 @@
-# Prerequisites
-*.d
+# Compiled Python files
+__pycache__/
+*.pyc
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Dependency directories
+venv/
+env/
+env.bak/
+.env
 
-# Precompiled Headers
-*.gch
-*.pch
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+*.egg
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# Optional: Editor/IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.pyc
