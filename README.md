@@ -1,6 +1,7 @@
 # KeyGuardian
 
-KeyGuardian is a comprehensive security tool designed to enhance data protection and management. It offers a suite of functionalities including data encryption, decryption, hash identification, and a brute-force decryption feature, all powered by Python. This tool is tailored for developers and security enthusiasts, providing a reliable solution for securing and managing sensitive information.
+KeyGuardian is a comprehensive security tool designed to enhance data protection and management. It offers a suite of functionalities including data encryption, decryption, hash identification, and a user-friendly interface for developers and security enthusiasts, providing a reliable solution for securing and managing sensitive information.
+
 
 ![KeyGuardian Main Interface](https://github.com/brodante/KeyGuardian/blob/main/assets/main_menu.PNG?raw=true)
 
