@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KeyGuardian</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>KeyGuardian</h1>
-        <nav>
-            <ul>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">KeyGuardian</h1>
+            <ul class="nav-links">
                 <li><a href="#identify-hash">Identify Hash</a></li>
                 <li><a href="#hashify">Hashify</a></li>
-                <li><a href="#encrypt-files">Encrypt Files/Folder</a></li>
-                <li><a href="#decrypt-files">Decrypt Files/Folder</a></li>
+                <li><a href="#encrypt">Encrypt Files/Folder</a></li>
+                <li><a href="#decrypt">Decrypt Files/Folder</a></li>
                 <li><a href="#exit">Exit</a></li>
             </ul>
-        </nav>
-        <div class="theme-toggle">
-            <input type="checkbox" id="theme-switch" name="theme-switch">
-            <label for="theme-switch">Toggle Dark/Light Mode</label>
+            <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
         </div>
-    </header>
+    </nav>
 
-    <section id="identify-hash">
-        <h2>Identify Hash</h2>
-        <p>A modified version of Zion3R's hash-identifier, used to identify the type of hash.</p>
-        <img src="identify-hash.png" alt="Identify Hash">
+    <!-- Main Content Sections -->
+    <section id="identify-hash" class="section">
+        <div class="container">
+            <h2>Identify Hash</h2>
+            <p>Content for Identify Hash</p>
+        </div>
     </section>
 
-    <section id="hashify">
-        <h2>Hashify</h2>
-        <p>Converts plain text into a hash. Currently under development, but supports the top 20 most frequent hashes.
-        </p>
-        <img src="hashify.png" alt="Hashify">
+    <section id="hashify" class="section">
+        <div class="container">
+            <h2>Hashify</h2>
+            <p>Content for Hashify</p>
+        </div>
     </section>
 
-    <section id="encrypt-files">
-        <h2>Encrypt Files/Folder</h2>
-        <p>Uses Fencry.py to encrypt files or folders, ensuring security and privacy.</p>
-        <img src="encrypt-files.png" alt="Encrypt Files">
+    <section id="encrypt" class="section">
+        <div class="container">
+            <h2>Encrypt Files/Folder</h2>
+            <p>Content for Encrypt Files/Folder</p>
+        </div>
     </section>
 
-    <section id="decrypt-files">
-        <h2>Decrypt Files/Folder</h2>
-        <p>Decrypts previously encrypted files or folders using Fdecry.py.</p>
-        <img src="decrypt-files.png" alt="Decrypt Files">
+    <section id="decrypt" class="section">
+        <div class="container">
+            <h2>Decrypt Files/Folder</h2>
+            <p>Content for Decrypt Files/Folder</p>
+        </div>
     </section>
 
-    <section id="exit">
-        <h2>Exit</h2>
-        <p>Exits the KeyGuardian program.</p>
+    <section id="exit" class="section">
+        <div class="container">
+            <h2>Exit</h2>
+            <p>Content for Exit</p>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 KeyGuardian. All rights reserved.</p>
-    </footer>
-
+    <!-- JavaScript for Smooth Scroll and Dark Mode Toggle -->
     <script src="scripts.js"></script>
 </body>
-
 </html>

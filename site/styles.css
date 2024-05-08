@@ -1,91 +1,89 @@
+/* styles.css */
+
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    scroll-behavior: smooth;
     transition: background-color 0.5s, color 0.5s;
 }
 
-header {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+}
+
+/* Navbar Styles */
+.navbar {
     background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.theme-toggle {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-.theme-toggle input[type="checkbox"] {
-    display: none;
-}
-
-.theme-toggle label {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border-radius: 5px;
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.5s, color 0.5s;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    color: #fff;
+    padding: 20px 0;
     position: fixed;
-    bottom: 0;
     width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+
+.dark-mode-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    color: #00bcd4;
+}
+
+/* Section Styles */
+.section {
+    padding: 100px 0;
+}
+
+.container h2 {
+    margin-bottom: 20px;
 }
 
 /* Dark Mode Styles */
-body.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
-}
-
-header.dark-mode {
-    background-color: #555;
-}
-
-footer.dark-mode {
-    background-color: #555;
-}
-
-section.dark-mode {
-    background-color: #555;
-    color: #f4f4f4;
+.dark-mode {
+    background-color: #111;
+    color: #fff;
 }
