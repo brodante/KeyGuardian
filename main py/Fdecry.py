@@ -64,7 +64,7 @@ def decrypt_folder(folder_path, key):
 
 def Fdecry():
     logo()
-    path = input("Enter the path of the file or folder to decrypt: ")
+    path = input("Enter the path of the file or folder to \033[96mDECRYPT\033[0m: ")
 
     if not os.path.exists(path):
         print("Error: The provided path does not exist.")

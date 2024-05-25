@@ -14,34 +14,40 @@ import Fencry
 import Fdecry
 import time
 
-ver = "0.3.1 beta"
-def logo(): # https://patorjk.com/software/taag/#p=display&f=Big&t=KeyGuardian%20v0.3.1%20beta
+#ver = "0.3.1 beta"
+def logo(): # https://patorjk.com/software/taag/#p=display&f=Big&t=KeyGuardian
     os.system("cls" if os.name == "nt" else "clear")
     #print("\n\n")
-    print("\033[96m" + "{:^80}".format("KeyGuardian v"+ver) + "\033[0m")
+    print("\033[96m" + "{:^60}".format("KeyGuardian") + "\033[0m")
     print("""\033[92m
-
-  _  __           _____                     _ _                      ___   ____  __   _          _        
- | |/ /          / ____|                   | (_)                    / _ \ |___ \/_ | | |        | |       
- | ' / ___ _   _| |  __ _   _  __ _ _ __ __| |_  __ _ _ __   __   _| | | |  __) || | | |__   ___| |_ __ _ 
- |  < / _ \ | | | | |_ | | | |/ _` | '__/ _` | |/ _` | '_ \  \ \ / / | | | |__ < | | | '_ \ / _ \ __/ _` |
- | . \  __/ |_| | |__| | |_| | (_| | | | (_| | | (_| | | | |  \ V /| |_| | ___) || | | |_) |  __/ || (_| |
- |_|\_\___|\__, |\_____|\__,_|\__,_|_|  \__,_|_|\__,_|_| |_|   \_/  \___(_)____(_)_| |_.__/ \___|\__\__,_|
-            __/ |                                                                                by:\033[91m D4NT3\033[0m\033[92m
+  _  __           _____                     _ _             
+ | |/ /          / ____|                   | (_)            
+ | ' / ___ _   _| |  __ _   _  __ _ _ __ __| |_  __ _ _ __  
+ |  < / _ \ | | | | |_ | | | |/ _` | '__/ _` | |/ _` | '_ \ 
+ | . \  __/ |_| | |__| | |_| | (_| | | | (_| | | (_| | | | |
+ |_|\_\___|\__, |\_____|\__,_|\__,_|_|  \__,_|_|\__,_|_| |_|
+            __/ |                                  by:\033[91m D4NT3\033[0m\033[92m
            |___/                                                                                             
 \033[0m""")
+    
+def cls():
+    os.system("cls" if os.name == "nt" else "clear")
 
 def identify_hash():
+    cls()
     identifyhash.identify_hash()
 def hash():
+    cls()
     hashify.hashify()
     #print("Hashifying function")
 
 def F_encry():
+    cls()
     Fencry.Fencry()
     #print("Encryption function")
 
 def F_decry():
+    cls()
     Fdecry.Fdecry()
     #print("Decryption function")
 
@@ -55,6 +61,7 @@ def exit_program():
 def main():
     while True:
         try:
+            cls()
             logo()
             print("\nMenu:")
             print("1. Identify Hash")

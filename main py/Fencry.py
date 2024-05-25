@@ -61,7 +61,7 @@ def encrypt_folder(folder_path, key):
 
 def Fencry():
     logo()
-    path = input("Enter the path of the folder or file to encrypt: ")
+    path = input("Enter the path of the folder or file to \033[91mENCRYPT\033[0m : ")
 
     # Check if the path is in the same directory as Fencry.py
     script_dir = os.path.dirname(os.path.abspath(__file__))
