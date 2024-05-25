@@ -1,5 +1,0 @@
-C++ is a statically-typed, compiled language. It is often used for systems programming and is known for its efficiency.
-The standard library is extensive and provides a lot of functionality out of the box.
-The language is known for its compile-time evaluation features, which can be used to optimize code.
-The C++ standard library is very large and has a lot of functionality that is not always used.
-The C++ community is very active and there are many resources available for learning the language.

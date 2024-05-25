@@ -10,6 +10,7 @@ Description: final year college student stuck in an infinite loop.
 import os
 import sys
 from cryptography.fernet import Fernet
+import time
 
 def logo():
     print("""\n
@@ -103,7 +104,9 @@ def Fencry():
         print("Error: The provided path is neither a file nor a directory.")
         sys.exit(1)
 
-    print("Encryption completed.")
+    for remaining in range(3, 0, -1):
+        print(f"\033[91mEncryption completed\033[0m. Returning in \033[96m{remaining}...\033[0m", end="\r")
+        time.sleep(1)  # Wait for 1 second
 
 # if __name__ == "__main__":
 #     main()
