@@ -12,7 +12,6 @@ KeyGuardian is a comprehensive security tool designed to enhance data protection
 -   **Hash Identification:** Identify the hash type of provided hashes, leveraging a slightly modified version of Zion3R's hash-identifier.
 -   **Hashify:** Convert plain text into a hash, supporting the top 20 most frequent hashes. <ins>Currently under development</ins>.
 -   **User-Friendly Interface:** Features a user-friendly command-line interface for easy interaction.
--   **Dark/Light Mode:** Toggle between dark and light modes for a comfortable user experience.
 
 ## Usage
 
@@ -23,7 +22,7 @@ KeyGuardian is a comprehensive security tool designed to enhance data protection
     cd KeyGuardian
     cd main py
     ```
-
+    
 2.  **Run the program:**
     ```
     python main.py
@@ -40,7 +39,7 @@ A big thank you to the following contributors who have helped shape and improve 
     -   **Role:** Developer | Security Expert  
     -   **Contributions:** Encryption algorithms, user interface enhancements, brute force decryption module, hash identification, Hashify development.
 
-2. [Pankaj Dhar Dubey](https://github.com/pdd1825)  
+2. [Surya Pratap Singh Chauhan](https://github.com/brodante)  
     -   **Role:** Documentation Lead  
     -   **Contributions:** Comprehensive documentation, usage examples.
 
